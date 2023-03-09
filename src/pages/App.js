@@ -23,10 +23,10 @@ function App() {
   }
   return (
     <Container>
-      <img src={gitLogo} width={72} height={72} />
-      <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)}/>
+      <img src={gitLogo} width={72} height={72} alt="github logo"/>
+      <Input value={currentRepo} onChange={(e) => setCurrentRepo(e.target.value)} />
       <Button onClick={handleSearchRepo}/>
-      {repos.map(repo => <ItemRepo />)}
+      {repos.map(repo => <ItemRepo repo={repos}/>)}
     </Container>
   );
 }
